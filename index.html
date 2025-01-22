@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <title>SS Music-Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./9973495.png">
+    <link rel="stylesheet" href="./style.css">
+
+ 
+</head>
+<body>
+    <div class="container">
+           <div class="backPlaylistCont">
+            <i class="fa-solid fa-circle-chevron-left"></i>
+            <div class="playerName">Music Player</div>
+            <i class="fa-solid fa-layer-group"></i>
+           </div>
+
+           <div class="picNameCont">
+               <div class="picCont">
+
+               </div>
+               <div class="nameCont">
+               
+                   
+                 <marquee class="titleSong"></marquee>
+               </div>
+                             <audio class="song">
+                                <source src="" type="audio/mp3">
+
+                             </audio>
+               <input class="rangeType" type="range" value="0">
+               <div class="duration">
+                <small class="currTime">--:--</small>
+                <small class="durTime">--:--</small>
+               </div>
+           </div>
+
+           <div class="controls">
+            <i class="fa-solid fa-backward backward"></i>
+            <i class="fa-solid fa-circle-play play"></i>
+            <i class="fa-solid fa-forward forward"></i>
+           </div>
+
+        <div class="selectMusic">
+           <!-- <h2>Select Music Files</h2> -->
+    <input type="file" id="music-input" accept="audio/*" multiple style="display: none;">
+    <div tabindex="0" class="plusButton">
+        <svg class="plusIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+          <g mask="url(#mask0_21_345)">
+            <path d="M13.75 23.75V16.25H6.25V13.75H13.75V6.25H16.25V13.75H23.75V16.25H16.25V23.75H13.75Z"></path>
+          </g>
+        </svg>
+      </div>
+
+    <div id="music-list" class=""><h2 class="nomusic" style="text-align: center;">No Music Selected</h2></div>
+
+</div>
+    </div>
+
+<script src="./script.js"></script>
+</body>
+</html>

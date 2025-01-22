@@ -1,0 +1,316 @@
+
+
+html,body{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* background-color: rgba(255, 224, 229, 0.566); */
+   background: url("./blurry-gradient-haikei.png");
+   /* background-position: ; */
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.container{
+   width: 400px;
+   height: 500px;
+   border-radius: 38px;
+   margin: 2rem;
+   background: #f2eeee;
+   box-shadow: inset -22px -22px 44px #cecaca,
+   inset 22px 22px 44px #ffffff;
+}
+
+
+.backPlaylistCont{
+   display: flex;
+   justify-content: space-between;
+   padding: 1.2rem;
+   width: 90%;
+   height: 50px;
+   
+}
+
+.backPlaylistCont i{
+   font-size: 2rem;
+   color: rgb(116, 9, 9);
+   cursor: pointer;
+
+}
+
+.picNameCont{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+
+}
+.picCont{
+   width: 200px;
+   height: 200px;
+   border-radius: 175px;
+  background: #f2eeee;
+  /* box-shadow: inset -25px -25px 34px #d5d1d1,
+   inset 15px 15px 24px #ffffff; */
+   background: url("https://images.unsplash.com/photo-1482618606784-2ca7968c062e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+   background-size: cover;
+   /* border: 2px solid rgb(116, 9, 9); */
+  
+   box-shadow: 1px 1px 30px rgb(116, 9, 9);
+}
+
+.picCont.imageRotating{
+   animation: rotateImage 10s linear infinite;
+}
+
+@keyframes rotateImage {
+   
+   0%{
+       transform: rotate(0deg);
+
+   }
+   100%{
+       transform: rotate(360deg);
+   }
+   
+}
+
+
+.nameCont{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    margin: 1.2rem 2rem;
+    width: 50%;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* border: 1px solid black; */
+}
+h3{
+   text-align: center;
+   text-overflow: ellipsis;
+   overflow: hidden;
+
+   /* border: 1px solid black; */
+
+  
+}
+.titleSong{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.rangeType{
+   -webkit-appearance: none;
+   width: 80%;
+   height: 10px;
+   border-radius: 20px;
+   background-color:rgb(116, 9, 9);
+   cursor: pointer;
+   border: none;
+   
+}
+.rangeType::-webkit-slider-thumb{
+   -webkit-appearance: none;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   background-color:rgb(116, 9, 9);
+   box-shadow: 2px 2px 10px rgb(116, 9, 9);
+   border: 10px solid rgb(216, 192, 255);
+  
+   
+}
+
+.duration{
+   display: flex;
+   justify-content: space-between;
+   width: 80%;
+   margin-top: 1rem;
+   font-weight: 700;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.controls{
+   width: 80%;
+   /* padding: 1.2rem 2rem; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 1.2rem 3rem;
+
+   gap: 1rem;
+   /* border: 1px solid black; */
+}
+.backward,.forward{
+   color: rgb(116, 9, 9);
+   font-size: 2rem;
+   cursor: pointer;
+}
+.play{
+   font-size: 3rem;
+   cursor: pointer;
+}
+
+.selectMusic{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+   /* margin: 2rem; */
+}
+
+/* choosebtn */
+/* From Uiverse.io by OnCloud125252 */ 
+/* Note that you only needs to edit the config to customize the button! */
+.playerName{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight: 500;
+text-overflow: ellipsis;
+overflow: hidden;
+}   
+
+
+.plusButton {
+/* Config start */
+--plus_sideLength: 2.5rem;
+--plus_topRightTriangleSideLength: 0.9rem;
+/* Config end */
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+border: 1px solid white;
+width: var(--plus_sideLength);
+height: var(--plus_sideLength);
+background-color: rgb(116, 9, 9);
+overflow: hidden;
+}
+
+.plusButton::before {
+position: absolute;
+content: "";
+top: 0;
+right: 0;
+width: 0;
+height: 0;
+border-width: 0 var(--plus_topRightTriangleSideLength) var(--plus_topRightTriangleSideLength) 0;
+border-style: solid;
+border-color: transparent white transparent transparent;
+transition-timing-function: ease-in-out;
+transition-duration: 0.2s;
+}
+
+.plusButton:hover {
+cursor: pointer;
+}
+
+.plusButton:hover::before {
+--plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
+}
+
+.plusButton:focus-visible::before {
+--plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
+}
+
+.plusButton>.plusIcon {
+fill: white;
+width: calc(var(--plus_sideLength) * 0.7);
+height: calc(var(--plus_sideLength) * 0.7);
+z-index: 1;
+transition-timing-function: ease-in-out;
+transition-duration: 0.2s;
+}
+
+.plusButton:hover>.plusIcon {
+fill: black;
+transform: rotate(180deg);
+}
+
+.plusButton:focus-visible>.plusIcon {
+fill: black;
+transform: rotate(180deg);
+}
+#music-list{
+/* border-radius: 50px;
+background: #e0e0e0;
+box-shadow:  -20px 20px 61px #bebebe,
+    20px -20px 61px #ffffff; */
+width: 100%;
+height: 300px;
+overflow-y: scroll;
+text-overflow: ellipsis;
+overflow-x:hidden;
+}
+.nomusicFound{
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 2rem;
+}
+
+.musicNames{
+width: 95%;
+padding: 3px 10px;
+border-bottom: 1px solid grey;
+cursor: pointer;
+}
+
+
+
+/* scrollbar */
+#music-list::-webkit-scrollbar {
+width: 5px; /* Width of the scrollbar */
+
+}
+
+/* Track */
+#music-list::-webkit-scrollbar-track {
+background: #f2eeee22; /* Background color of the track */
+border-radius: 50px; /* Optional: for rounded corners */
+}
+
+/* Handle (thumb) */
+#music-list::-webkit-scrollbar-thumb {
+background: rgb(116, 9, 9); /* Color of the scrollbar thumb */
+border-radius: 10px; /* Optional: for rounded corners */
+box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3); /* Optional: shadow effect */
+}
+
+/* Handle on hover */
+#music-list::-webkit-scrollbar-thumb:hover {
+background: rgb(150, 20, 20); /* Color when hovering over the scrollbar thumb */
+}
+
+
+.nomusic{
+text-shadow: 1px 1px 20px black;
+}
+
+@media (max-width:400px) {
+    .container{
+        width: 370px;
+        margin: 1.5rem;
+        overflow: hidden;
+    }
+
+    .controls{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 1rem;
+        margin: 1.2rem 2.2rem;
+        
+     }
+    
+}
